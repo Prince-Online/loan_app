@@ -1,0 +1,47 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="https://kit.fontawesome.com/8aa17a250d.js" crossorigin="anonymous"></script>
+<style>
+    .voilet { width: 100%; border-bottom-right-radius: 25px; border-bottom-left-radius: 25px; height: 140px; background: #7c63ff; }
+    .quicklinks { background: #fff; height: 50px;display: flex; justify-content: center; align-items: center; width: 200px; margin: -20px 10px 10px 10px; border-radius: 12px; }
+    .quicklinks p { font-size: 28px; color: #333; font-weight: 400; }
+    .white { display: flex; flex-direction: column-reverse; }
+    i { overflow: hidden; font-size: 100px; color: #eee; }
+    .card p { font-size: 22px; }
+    .card { padding: 20px; margin: 10px; border-radius: 12px; }
+    .links { display: flex; justify-content: space-around; }
+    .card > a { display: flex; align-items: center; justify-content: center; flex-direction: column; color: #eee; }
+    #Name {  font-size: 28px; font-weight: 600; margin: 10px; color: #fff; }
+</style>
+<div class="white">
+<div class="quicklinks"><p>Quick Links</p></div>
+<div class="voilet">
+<p id="Name"></p>
+</div>
+</div>
+<form action="https://script.google.com/macros/s/AKfycbz7dnDkXfyIblSadgUh7jCoelk2J4hOAxBW3O65J4n55gPRDokWo52wPbMmqHFCn4UIKA/exec" method="POST">
+    <input type="hidden" name="email" id="email">
+    <input type="hidden" name="amount" id="amount">
+</form>
+<div class="links">
+    <div class="card" style="background: #a8d0d9;"><a href="loans.html">
+        <i class="fa-solid fa-landmark"></i>
+        <p>Approve Loan</p></a>
+    </div>
+    <div class="card" style="background: #d9a8c7;"><a href="calculator.html">
+        <i class="fa-solid fa-calculator"></i>
+        <p>Calculator</p></a>
+    </div>
+</div>
+<div class="links">
+    <div class="card" style="background: #d3d9a8;"><a href="pay.html">
+        <i class="fa-solid fa-money-check-dollar"></i>
+        <p>Pay Loan</p></a>
+    </div>
+    <div class="card" style="background: #d9a8a8;"><a href="due.html">
+        <i class="fa-solid fa-receipt"></i>
+        <p>Due Amount</p></a>
+    </div>
+</div>
+<script src="script.js"></script>

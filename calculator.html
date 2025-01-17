@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    h2 { font-weight: 500; font-size: 28px; }
+    input { padding: 8px; width: 100%; border: none; border-bottom: 1px solid #000; outline: none; font-size: 22px; background: transparent; }
+    .calculator { padding: 20px; border-radius: 8px; max-width: 300px; margin: auto; }
+    label { margin: 10px 0px 0px 0px; font-size: 22px; color: #333; }
+    button { margin: 15px 0px 0px 0px; width: 100%; padding: 8px; border: none; font-size: 20px; background: #8293ee; border-radius: 8px; font-weight: 600; color: #fff; }
+    .form { display: flex; flex-direction: column; align-items: start; justify-content: center; height: 90vh; }
+    .result { font-size: 18px; font-weight: 500; }
+</style>
+
+<div class="calculator">
+    <div class="form">
+    <h2>Interest Calculator</h2>
+    <label for="amount">Enter Amount:</label>
+    <input type="number" id="amount" placeholder="Amount" required>
+    
+    <label for="percentage">Enter Percentage:</label>
+    <input type="number" id="percentage" placeholder="Percentage" required>
+    
+    <button onclick="calculate()">Calculate</button>
+    <div class="result" id="result"></div>
+</div>
+</div>
+<script>
+    function calculate() {
+        const amount = parseFloat(document.getElementById('amount').value);
+        const percentage = parseFloat(document.getElementById('percentage').value);
+        if (isNaN(amount) || isNaN(percentage)) {
+            document.getElementById('result').textContent = 'Please enter valid numbers for both fields.';
+            return;
+        }
+        const result = amount + (amount * (percentage / 100));
+        document.getElementById('result').textContent = `Result: ${result.toFixed(2)}`;
+    }
+</script>

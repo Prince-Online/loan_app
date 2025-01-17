@@ -1,0 +1,16 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    .pay img { width: 140px; margin: 18px; }
+    #dueAmount { height: 100vh; }
+    .pay { height: 80vh; font-size: 24px; text-align: center; }
+    .pay , #dueAmount { display: flex; align-items: center; justify-content: center; flex-direction: column;}
+    button { padding: 12px; border: none; background: #8293ee; border-radius: 8px; color: #fff; width: 150px; font-size: 18px; cursor: pointer; margin: 10px; }
+</style>
+<p id="dueAmount"><span style="font-size: 24px;">Loading...</span></p>
+<form action="https://script.google.com/macros/s/AKfycbxRQO7ZwYBUsKIGRMfzKPm0aNd5Nm4P7qYe0cHLPC1Ky7dsizq7Q1tg0FtheTw2pXmgGw/exec" method="POST">
+    <input type="hidden" name="email" id="email">
+    <input type="hidden" name="amount" id="amount">
+</form>
+<script src="due.js"></script>

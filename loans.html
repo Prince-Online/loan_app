@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    .header h2 { font-size: 24px; font-weight: 500; color: #333; }
+    .header p { font-size: 18px; font-weight: 400; color: #333; }
+    .header { margin: 15px; }
+    .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
+    .modal-content { background-color: white; margin: 15% auto; padding: 20px; width: 70%; max-width: 500px; border-radius: 5px; }
+    .close { float: right; cursor: pointer; font-size: 24px; }
+    input[type="file"]::file-selector-button { border: 2px solid #6c5ce7; padding: 0.2em 0.4em; border-radius: 0.2em; background-color: #a29bfe; transition: 1s; }
+    .modal button { padding: 8px; border: none; background: #8293ee; border-radius: 8px; color: #fff; width: 90%; margin: 10px 0px 0px 0px; cursor: pointer; }
+    .loan-card { margin: 10px 20px; background-color: #fff; padding: 10px; display: flex; flex-direction: column; border-radius: 8px; }
+    .title-menu { display: flex; justify-content: space-between; align-items: center; margin: 10px; padding: 0px 0px 10px 0px; border-bottom: 1px solid #000; }
+    .title-menu h3 { font-size: 24px; font-weight: 500; }
+    button { padding: 12px; border: none; background: #8293ee; border-radius: 8px; color: #fff; width: 90px; cursor: pointer; }
+    .loan-proof { display: flex; text-align: center; justify-content: space-around; }
+</style>
+<div class="header">
+    <h2>Avaiable Loan Offers</h2>
+    <p>These Loan Offers Is Currently Avaiable</p>
+</div>
+<div id="loansList"></div>
+<div id="applicationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h3>Loan Application</h3>
+        <form id="loanForm">
+            <input type="hidden" id="selectedAmount" name="selectedAmount">
+            <input type="hidden" id="selectedInterest" name="selectedInterest">
+            <input type="hidden" id="selectedTime" name="selectedTime">
+            
+            <div class="form-group">
+                <label for="aadharCard">Aadhar Card:</label>
+                <input type="file" id="aadharCard" name="aadharCard" accept="image/*" required>
+                <label for="panCard">PAN Card:</label>
+                <input type="file" id="panCard" name="panCard" accept="image/*" required>
+            </div>
+            <button type="submit">Submit Application</button>
+        </form>
+    </div>
+</div>
+
+<script src="loans.js"></script>

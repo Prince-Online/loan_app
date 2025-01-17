@@ -1,0 +1,48 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+    #bankingForm , #otpSection { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    .form { padding: 20px; display: flex; }
+    .form ,.otp-form { flex-direction: column; width: 90%; }
+    h2 { font-weight: 500; font-size: 28px; }
+    p { font-size: 22px; color: #333; }
+    input { padding: 8px; width: 100%; border: none; border-bottom: 1px solid #000; outline: none; font-size: 22px; background: transparent; }
+    label { margin: 10px 0px 0px 0px; font-size: 22px; color: #333; }
+    button { margin: 15px 0px 0px 0px; width: 100%; padding: 8px; border: none; font-size: 20px; background: #8293ee; border-radius: 8px; font-weight: 600; color: #fff; }
+    .account { font-size: 18px; margin: 10px 0px 0px 0px; }
+    a { text-decoration: none; font-weight: 500; color: #8293ee; }
+    .error { text-align: center; font-size: 18px; color: #ff0000; margin: 10px 0px 0px 0px; }
+</style>
+<style>
+</style>
+<form id="bankingForm">
+    <div class="form">
+        <h2>Create Your Account</h2>
+        <p>Approve Your Loan As Soon Possible.</p>
+        <label>Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label>Email:</label>
+        <input type="email" id="email"name="email" required>
+        <label>Mobile Number:</label>
+        <input type="number" id="mobile" name="mobile" required>
+        <label>Bank Name:</label>
+        <input type="text" id="bankName"name="bankName" required>
+        <label>Account Number:</label>
+        <input type="text" id="accountNumber" name="accountNumber" required>
+        <label>IFSC Code:</label>
+        <input type="text" id="ifsc" name="ifsc" required>
+        <label>Password: </label>
+        <input type="password" id="password"name="password" required>
+        <button type="button" id="getOtpBtn">Get OTP</button>
+        <p class="account">Already Have Account? <a href="login.html">LOGIN</a></p>
+    </div>
+    <div id="otpSection" style="display: none; width: 100%;">
+        <div class="otp-form">
+            <label for="otp">Enter OTP:</label>
+            <input type="text" id="otp" name="otp" required maxlength="6">
+        </div>
+        <button type="submit" id="submitBtn" style="width: 90%; margin: 20px 0px;">Submit</button>
+    </div>
+</form>
+<script src="signup.js"></script>
